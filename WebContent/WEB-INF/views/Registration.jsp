@@ -9,17 +9,18 @@
 </head>
 <body>
 <form action="registereduser" method="POST">
-First Name:	<input type="text" name="firstName" pattern="[a-zA-Z]" placeholder="John" title="Names can only have letters of the english alphabet" aria-label="John" required> <br>
-Last Name:	<input type="text" name="lastName" pattern="[a-zA-Z]" placeholder="Doe" title="Names can only have letters of the english alphabet" aria-label="Doe" required> <br>
-Address1:	<input type="text" name ="address1" pattern="[a-zA-Z0-9].{2,}" required> <br>
+First Name:	<input type="text" name="firstName" pattern="[a-zA-Z].{1,}" placeholder="John" title="Names can only have letters of the english alphabet" aria-label="John" required> <br>
+Last Name:	<input type="text" name="lastName" pattern="[a-zA-Z].{1,}" placeholder="Doe" title="Names can only have letters of the english alphabet" aria-label="Doe" required> <br>
+Address1:	<input type="text" name ="address1" pattern="[a-zA-Z0-9].{2,}" title="Please fill in your street address" required> <br>
 Address2:	<input type="text" name="address2"> <br>
-City:		<input type="text" name="city" pattern="[a-zA-Z]" title="City can only be letters" required> <br>
-State:		<input type="text" name="state" pattern="[a-zA-Z]" title="State can only be letters" required> <br>
-Zip:		<input type="text" name="zip" pattern="[0-9]*.{5}" title="Must be 5 digit zipcode" required> <br>
+City:		<input type="text" name="city" pattern="[a-zA-Z].{1,}" title="City can only be letters" required> <br>
+State:		<input type="text" name="state" pattern="[a-zA-Z].{1,}" title="State can only be letters" required> <br>
+Zip:		<input type="text" name="zip" pattern="(?=.*\d)*.{5}" maxlength=5 title="Must be 5 digit zipcode" required> <br>
 Country:	<input list="country" name="country" required>
 <datalist id="country">
-<option value="USA">
+<option value="US">
 </datalist>
+<input type="submit" value="Register">
 </form>
 ${hw}
 </body>

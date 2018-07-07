@@ -18,7 +18,7 @@ public class RegisteredUser {
 
 	@RequestMapping("registereduser")
 	public String users(Model model, @RequestParam(value = "firstName") String firstName,
-			@RequestParam(value = "lastName") String lastName, @RequestParam(value = "address1") String address1, @RequestParam(value = "address2") String address2, @RequestParam(value = "city") String city, @RequestParam(value = "State") String state, @RequestParam(value = "zip") int zip, @RequestParam(value = "country") String country) {
+			@RequestParam(value = "lastName") String lastName, @RequestParam(value = "address1") String address1, @RequestParam(value = "address2") String address2, @RequestParam(value = "city") String city, @RequestParam(value = "state") String state, @RequestParam(value = "zip") int zip, @RequestParam(value = "country") String country) {
 		
 		Configuration cfg = new Configuration();
 		cfg.configure("hibernate.cfg.xml");

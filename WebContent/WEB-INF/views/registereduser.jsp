@@ -4,9 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Confirmation Page</title>
 </head>
 <body>
+<h2> Hello ${firstName} ${lastName}, to confirm your details for your registration: </h2>
 
+Your address is: ${address1}
+${address2}
+${city}
+${state}
+${zip}
+${country}
+
+<h2>Thank you for registering!</h2>
 </body>
 </html>
