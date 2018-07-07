@@ -4,6 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<div class="logo">
+<img src="resources/images/goodbye_ planet.png">
+</div>
 <link href="https://fonts.googleapis.com/css?family=Kanit"
 	rel="stylesheet">
 <link href="resources/styles.css" type="text/css" rel="stylesheet">

@@ -1,0 +1,39 @@
+@charset "ISO-8859-1";
+
+
+
+body{
+	
+background-image:url("http://www.hd-freewallpapers.com/latest-wallpapers/awesome-planet-pics-download.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	  color: rgb(127, 127, 127);
+    text-align: left;
+    font-style: italic;
+    font-weight:bolder;
+    font-size: 20px;
+}
+H2{
+text-align: center;	
+	
+}
+div.transbox {
+  margin: 300px;
+  background-color: white;
+  border: 15px;
+  border-style: solid;
+  border-color: rgb(0, 151, 220);
+  opacity: 0.9;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: rgb(127, 127, 127);
+}
+
+div.logo {
+text-align: right;
+}

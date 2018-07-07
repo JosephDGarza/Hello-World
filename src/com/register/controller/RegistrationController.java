@@ -10,8 +10,6 @@ public class RegistrationController {
 	@RequestMapping({"/", "Registration"}) 
 	public String index(Model model) {
 	
-	String hw = "Hello World1";
-	model.addAttribute("hw", hw);
 	return "Registration";
 }
 }
