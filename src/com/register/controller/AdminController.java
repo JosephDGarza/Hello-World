@@ -28,6 +28,8 @@ public class AdminController {
 		Session s = sf.openSession();
 		Transaction tx = s.beginTransaction();
 		Object[] obj = new Object[9];
+		
+		//Query for sql in order to grab what I want, and order it by most recent date.
 		String sqlQuery = "select firstName,lastName,address1,address2,city,state,zip,country,date from RegisteredUserDto ORDER BY date DESC";
 		Query query = s.createQuery(sqlQuery);
 		
@@ -47,8 +49,7 @@ public class AdminController {
 		List<RegisteredUserDto> list = new ArrayList<RegisteredUserDto>();
 		while (i.hasNext()) {
 			
-			// Objects position is being correlated by the createQuery above. IE. g.appID is
-			// the first, so that would be obj[0]
+			
 			obj = (Object[]) i.next();
 			firstName = (String) obj[0];
 			lastName = (String) obj[1];
@@ -60,11 +61,13 @@ public class AdminController {
 			country = (String) obj[7];
 			date = (String) obj[8];
 			
+			//adding to my array list
 			list.add(new RegisteredUserDto(firstName, lastName, address1, address2, city, state, zip, country, date));
 			System.out.println(list.get(0).getFirstName());
 		}	
 		s.flush();
 		s.close();
+		//passing array list through to display all users information on the admin page
 		model.addAttribute("list", list);
 		return "admin";
 	}

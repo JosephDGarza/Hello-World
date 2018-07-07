@@ -16,7 +16,19 @@
 <body>
 
 <table border="1">
+	<tr>
+	<th>First name</th>
+	<th>Last name</th>
+	<th>Address1</th>
+	<th>Address2</th>
+	<th>City</th>
+	<th>State</th>
+	<th>Zip</th>
+	<th>Country</th>
+	<th>Date</th>
+	</tr>
 	<c:forEach var="myFavs" items="${list}">
+
 			<tr>
 				<td>${myFavs.firstName}</td>
 				<td>${myFavs.lastName}</td>
@@ -33,7 +45,7 @@
 
 		</c:forEach>
 		</table>
-	</div>
+
 	</main>
 </body>
 </html>

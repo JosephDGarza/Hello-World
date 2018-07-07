@@ -39,7 +39,7 @@ public class RegisteredUserController {
 		newUser.setCountry(country);
 		// using a method to pull current date
 		String date = "";
-		date = dateClass.dateSetter(date);
+		date = dateClass.dateSetter();
 		System.out.println(date);
 		newUser.setDate(date);
 
