@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.criteria.internal.expression.function.CurrentDateFunction;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +34,11 @@ public class RegisteredUser {
 		newUser.setState(state);
 		newUser.setZip(zip);
 		newUser.setCountry(country);
+		String date = "";
+		date = dateClass.dateSetter(date);
+		System.out.println(date);
+		newUser.setDate(date);
+		
 		
 		
 			Session session = factory.openSession();

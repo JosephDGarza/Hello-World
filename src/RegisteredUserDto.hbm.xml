@@ -18,25 +18,34 @@
 		<property name="LastName">
 			<column name="LastName" sql-type="varchar(255)"></column>
 			</property>
+			
 		<property name="Address1">
 			<column name="Address1" sql-type="varchar(255)"></column>
 		</property>
+		
 		<property name="Address2">
 			<column name="Address2" sql-type="varchar(255)"></column>
 		</property>
+		
 		<property name="City">
 			<column name="City" sql-type="varchar(255)"></column>
 		</property>
+		
 		<property name="State">
 			<column name="State" sql-type="varchar(255)"></column>
 		</property>
+		
 		<property name="Zip">
 			<column name="Zip" sql-type="int(9)"></column>
 		</property>
+		
 		<property name="Country">
 			<column name="Country" sql-type="varchar(2)"></column>
 		</property>
-				
+		
+		<property name="Date">
+			<column name="Date" sql-type="varchar(255)"></column>
+		</property>
 		
 		
 	</class>
