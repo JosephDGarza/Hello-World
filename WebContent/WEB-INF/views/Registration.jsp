@@ -8,7 +8,7 @@
 <title>Good-Bye Planet Login</title>
 </head>
 <body>
-<form action="registereduser" method="POST">
+<form onsubmit="formValidation();" action="registereduser" method="POST">
 First Name:	<input type="text" name="firstName" pattern="[a-zA-Z].{1,}" placeholder="John" title="Names can only have letters of the english alphabet" aria-label="John" required> <br>
 Last Name:	<input type="text" name="lastName" pattern="[a-zA-Z].{1,}" placeholder="Doe" title="Names can only have letters of the english alphabet" aria-label="Doe" required> <br>
 Address1:	<input type="text" name ="address1" pattern="[a-zA-Z0-9].{2,}" title="Please fill in your street address" required> <br>
@@ -39,11 +39,7 @@ ${hw}
 function zipValidation() {
 var zip = document.getElementById("zip").value;
 var invalidZip ="";
-if (zip*1 < 10000) {
-invalidZip = "Zip code must be either 5 or 9 digits in legnth";
-document.getElementById("zipValid").innerHTML = invalidZip;
-}
-else if (zip*1 > 99999 && zip*1 < 100000000) {
+if (zip.length < 5 || zip.length > 5 && zip.length < 9) {
 invalidZip = "Zip code must be either 5 or 9 digits in legnth";
 document.getElementById("zipValid").innerHTML = invalidZip;
 }
@@ -51,6 +47,16 @@ else{invalidZip = "";
 document.getElementById("zipValid").innerHTML = invalidZip;
 }
 
+  }
+  
+function formValidation(){
+var zip = document.getElementById("zip").value;
+if(zip.length < 5 || zip.length > 5 && zip.length < 9){
+alert ("Valid zip is required");
+	event.preventDefault();
+    returnToPreviousPage();
+    return false;
+  }
 }
 </script>
 </html>
