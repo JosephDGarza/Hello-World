@@ -5,14 +5,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class Login {
+public class Registration {
 	
-	@RequestMapping({"/", "index"}) 
+	@RequestMapping({"/", "Registration"}) 
 	public String index(Model model) {
 	
-	String hw = "Hello World";
+	String hw = "Hello World1";
 	model.addAttribute("hw", hw);
-	return "index";
+	return "Registration";
 }
 }
 

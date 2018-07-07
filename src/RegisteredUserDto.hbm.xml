@@ -1,0 +1,43 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.RegisteredUserDto" table="users"
+		schema="goodbye">
+
+
+		<id name="id">
+			<column name="id" sql-type="int(255)"></column>
+		</id>
+		<property name="FirstName">
+			<column name="FirstName" sql-type="varchar(255)"></column>
+		</property>
+		
+		<property name="LastName">
+			<column name="LastName" sql-type="varchar(255)"></column>
+			</property>
+		<property name="Address1">
+			<column name="Address1" sql-type="varchar(255)"></column>
+		</property>
+		<property name="Address2">
+			<column name="Address2" sql-type="varchar(255)"></column>
+		</property>
+		<property name="City">
+			<column name="City" sql-type="varchar(255)"></column>
+		</property>
+		<property name="State">
+			<column name="State" sql-type="varchar(255)"></column>
+		</property>
+		<property name="Zip">
+			<column name="Zip" sql-type="int(9)"></column>
+		</property>
+		<property name="Country">
+			<column name="Country" sql-type="varchar(2)"></column>
+		</property>
+				
+		
+		
+	</class>
+</hibernate-mapping>	
