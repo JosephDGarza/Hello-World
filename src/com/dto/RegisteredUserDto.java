@@ -31,6 +31,21 @@ public class RegisteredUserDto implements Serializable {
 		
 	}
 	
+	
+	
+	public RegisteredUserDto(String firstName, String lastName, String address1, String address2, String city,
+			String state, int zip, String country, String date) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address1 = address1;
+		this.address2 = address2;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
+		this.country = country;
+		this.date = date;
+	}
 	public RegisteredUserDto(int id, String firstName, String lastName, String address1, String address2, String city,
 			String state, int zip, String country, String date) {
 		super();

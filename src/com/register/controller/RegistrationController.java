@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class Registration {
+public class RegistrationController {
 	
 	@RequestMapping({"/", "Registration"}) 
 	public String index(Model model) {
