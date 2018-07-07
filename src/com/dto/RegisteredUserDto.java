@@ -29,6 +29,9 @@ public class RegisteredUserDto implements Serializable {
 		this.zip = zip;
 		this.country = country;
 	}
+	public RegisteredUserDto() {
+		
+	}
 
 	public String getFirstName() {
 		return firstName;
