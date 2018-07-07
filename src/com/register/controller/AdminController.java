@@ -61,11 +61,11 @@ public class AdminController {
 			date = (String) obj[8];
 			
 			list.add(new RegisteredUserDto(firstName, lastName, address1, address2, city, state, zip, country, date));
-		}
+			System.out.println(list.get(0).getFirstName());
+		}	
 		s.flush();
 		s.close();
 		model.addAttribute("list", list);
-		model.addAttribute("firstName", firstName);
 		return "admin";
 	}
 
