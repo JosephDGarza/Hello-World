@@ -27,7 +27,9 @@ public class RegisteredUserController {
 		Configuration cfg = new Configuration();
 		cfg.configure("hibernate.cfg.xml");
 		SessionFactory factory = cfg.buildSessionFactory();
+
 		// Preparing users information to transfer into databse
+
 		RegisteredUserDto newUser = new RegisteredUserDto();
 		newUser.setFirstName(firstName);
 		newUser.setLastName(lastName);
@@ -37,10 +39,11 @@ public class RegisteredUserController {
 		newUser.setState(state);
 		newUser.setZip(zip);
 		newUser.setCountry(country);
-		// using a method to pull current date
+
+		// using a method to pull current date in format I would like
+
 		String date = "";
 		date = dateClass.dateSetter();
-		System.out.println(date);
 		newUser.setDate(date);
 
 		Session session = factory.openSession();

@@ -14,27 +14,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.dto.RegisteredUserDto;
 
-
-
 @Controller
 public class AdminController {
-	
+
 	@RequestMapping("admin")
-	
-	public String admin (Model model) {
+
+	public String admin(Model model) {
 		Configuration cfg = new Configuration();
 		cfg.configure("hibernate.cfg.xml");
 		SessionFactory sf = cfg.buildSessionFactory();
 		Session s = sf.openSession();
 		Transaction tx = s.beginTransaction();
 		Object[] obj = new Object[9];
-		
-		//Query for sql in order to grab what I want, and order it by most recent date.
+
+		// Query for sql in order to grab what I want, and order it by most recent date.
 		String sqlQuery = "select firstName,lastName,address1,address2,city,state,zip,country,date from RegisteredUserDto ORDER BY date DESC";
 		Query query = s.createQuery(sqlQuery);
-		
+
 		String firstName = "";
-		String lastName ="";
+		String lastName = "";
 		String address1 = "";
 		String address2 = "";
 		String city = "";
@@ -48,8 +46,7 @@ public class AdminController {
 		Iterator i = results.iterator();
 		List<RegisteredUserDto> list = new ArrayList<RegisteredUserDto>();
 		while (i.hasNext()) {
-			
-			
+
 			obj = (Object[]) i.next();
 			firstName = (String) obj[0];
 			lastName = (String) obj[1];
@@ -60,14 +57,16 @@ public class AdminController {
 			zip = (int) obj[6];
 			country = (String) obj[7];
 			date = (String) obj[8];
-			
-			//adding to my array list
+
+			// adding to my array list
 			list.add(new RegisteredUserDto(firstName, lastName, address1, address2, city, state, zip, country, date));
-			System.out.println(list.get(0).getFirstName());
-		}	
+
+		}
 		s.flush();
 		s.close();
-		//passing array list through to display all users information on the admin page
+
+		// passing array list through to display all users information on the admin page
+
 		model.addAttribute("list", list);
 		return "admin";
 	}

@@ -6,11 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class RegistrationController {
-	
-	@RequestMapping({"/", "Registration"}) 
-	public String index(Model model) {
-	
-	return "Registration";
-}
-}
 
+	@RequestMapping({ "/", "Registration" })
+	public String index(Model model) {
+
+		return "Registration";
+	}
+}

@@ -5,7 +5,7 @@
 <html>
 <head>
 <div class="logo">
-<img src="resources/images/goodbye_ planet.png">
+	<img src="resources/images/goodbye_ planet.png">
 </div>
 <link href="https://fonts.googleapis.com/css?family=Kanit"
 	rel="stylesheet">
@@ -15,19 +15,25 @@
 </head>
 <body>
 
-<table border="1">
-	<tr>
-	<th>First name</th>
-	<th>Last name</th>
-	<th>Address1</th>
-	<th>Address2</th>
-	<th>City</th>
-	<th>State</th>
-	<th>Zip</th>
-	<th>Country</th>
-	<th>Date</th>
-	</tr>
-	<c:forEach var="myFavs" items="${list}">
+	<table border="1">
+		<tr>
+
+			<!-- Headings for table  -->
+
+			<th>First name</th>
+			<th>Last name</th>
+			<th>Address1</th>
+			<th>Address2</th>
+			<th>City</th>
+			<th>State</th>
+			<th>Zip</th>
+			<th>Country</th>
+			<th>Date</th>
+		</tr>
+
+		<!--  Creating variable to hold the array list of users passed over -->
+
+		<c:forEach var="myFavs" items="${list}">
 
 			<tr>
 				<td>${myFavs.firstName}</td>
@@ -39,12 +45,12 @@
 				<td>${myFavs.zip}</td>
 				<td>${myFavs.country}</td>
 				<td>${myFavs.date}</td>
-				
+
 
 			</tr>
 
 		</c:forEach>
-		</table>
+	</table>
 
 	</main>
 </body>
